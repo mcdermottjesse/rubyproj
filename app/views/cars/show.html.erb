@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<%= @car.brand%> 
+<%= @car.model %>
+<%= @car.year %> 
+<%= image_tag @car.image %>  
+<%= @car.price %>  
+<%= @car.colour %> 
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>
