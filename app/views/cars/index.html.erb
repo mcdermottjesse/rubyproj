@@ -2,36 +2,36 @@
 <%= link_to 'New Car', new_car_path %>
 <h1>Cars</h1>
 
-    <% @cars.each do |car| %>
-      <div>
-      <div>
-       <%= car.brand %> 
-       </div>
-       <div>
-       <%= car.model %>
-       </div>
-       <div>
-       <%= car.year %> 
-       </div>
-       <div>
-       <%= image_tag car.image %>  
-       </div>
-       <div>
-       <%= car.price %>
-       </div>
-       <div>  
-       <%= car.colour %>
-       </div> 
-       <tbody> 
-      <tr>
-        <td><%= link_to 'View', car_path(car)%> </td>
-        <td><%= link_to 'Edit', edit_car_path(car) %></td>
-        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
-      </tr>
-      <br>
-        <br>
-    <% end %>
-  </tbody>
+<% @car.each do |car| %>
+  <div>
+  <div>
+   <%= car.brand %> 
+   </div>
+   <div>
+   <%= car.model %>
+   </div>
+   <div>
+   <%= car.year %> 
+   </div>
+   <div>
+   <%= image_tag car.image %>  
+   </div>
+   <div>
+   <%= car.price %>
+   </div>
+   <div>  
+   <%= car.colour %>
+   </div> 
+   <tbody> 
+  <tr>
+    <td><%= link_to 'View', car_path(car)%> </td>
+    <td><%= link_to 'Edit', edit_car_path(car) %></td>
+    <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+  </tr>
+  <br>
+    <br>
+<% end %>
+</tbody>
 </table>
 </div>
 
