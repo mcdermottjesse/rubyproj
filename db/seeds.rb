@@ -36,6 +36,31 @@ Car.create!({
   colour: "White"
 })
 
+Car.create!({
+  brand: "Mitsubishi",
+  model: "Lancer",
+  year: 2015,
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWM8choURQuWhv04oZXnkjB0DF9QCITj2lOg&usqp=CAU",
+  price: 42000,
+  colour: "Blue"
+})
 
+Car.create!({
+  brand: "BMW",
+  model: "M5",
+  year: 2016,
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF3Fka8h4fCttq0YCSoqFzxRE7069fXqFb4ocsPQ56SqyXWVyjgLAETEvbV-J-0r1Csko&usqp=CAUU",
+  price: 50000,
+  colour: "Orange"
+})
+
+Car.create!({
+  brand: "Mercedes",
+  model: "Benz",
+  year: 1965,
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb69EkNLwcH_lZdsM4mLnIWBjDFwBUbavrckqVNqjoztWmqUFODxQMK7-zT9O94FUI8mo&usqp=CAU",
+  price: 40000,
+  colour: "White"
+})
 
 p "Create #{Car.count} cars"
