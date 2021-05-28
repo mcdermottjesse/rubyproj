@@ -6,6 +6,7 @@ class CarsController < ApplicationController
     
 
     @car = Car.search(params[:search])
+  
   end
 
   
