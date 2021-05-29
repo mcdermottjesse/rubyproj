@@ -4,11 +4,9 @@ class CarsController < ApplicationController
 
   def index
     
-
-    @car = Car.search(params[:search])
-  
+    @car = Car.all
+   
   end
-
   
   def show
     @car = Car.find params[:id]
