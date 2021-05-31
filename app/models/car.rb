@@ -1,12 +1,9 @@
 class Car < ApplicationRecord
   def self.search_brand(search_brand)
-    if search_brand
+    
       # where('brand LIKE :search OR model LIKE :search OR colour LIKE :search OR cast(year as text) LIKE :search OR cast(price as text) LIKE :search', search: "%#{search}%")
     where('LOWER(brand) LIKE :search_brand OR brand LIKE :search_brand', search_brand: "%#{search_brand}%") #note ":search_brand can be any string"
-    else
-      Car.all
-      
-    end
+    #don't need Car.all as search page just renders what is searched, maybe good prac to have it?
   end
 
   def self.search_model(search_model)
