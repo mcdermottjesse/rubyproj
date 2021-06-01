@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
 
-  def brand_index
+  def index
   @car_brand = Car.search_brand(params[:search_brand])
   end
 

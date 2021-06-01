@@ -1,19 +1,19 @@
 <nav>
-<%= form_tag(search_brand_path, method: :get) do %>
+<%= form_tag(cars_path, method: :get) do %>
   <%= search_field_tag(:search_brand, params[:search_brand]) %>
   
   <%= submit_tag ("Search by Brand") %>
   <% end %>
   
 <br><br>
-  <%= form_tag(search_model_path, method: :get) do %>
+  <%= form_tag(cars_path, method: :get) do %>
     <%= search_field_tag(:search_model, params[:search_model]) %>
     
     <%= submit_tag ("Search by Model") %>
    
     <% end %>
     <br><br>
-    <%= form_tag(search_year_path, method: :get) do %>
+    <%= form_tag(cars_path, method: :get) do %>
       <%= search_field_tag(:search_year, params[:search_year]) %>
       
       <%= submit_tag ("Search by Year") %>
@@ -21,7 +21,7 @@
       <% end %>
 
       <br><br>
-      <%= form_tag(search_price_path, method: :get) do %>
+      <%= form_tag(cars_path, method: :get) do %>
         <%= search_field_tag(:search_price, params[:search_price]) %>
         
         <%= submit_tag ("Search by Max Price") %>
@@ -29,7 +29,7 @@
         <% end %>
 
         <br><br>
-        <%= form_tag(search_colour_path, method: :get) do %>
+        <%= form_tag(cars_path, method: :get) do %>
           <%= search_field_tag(:search_colour, params[:search_colour]) %>
           
           <%= submit_tag ("Search by Colour") %>

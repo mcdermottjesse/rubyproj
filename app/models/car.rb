@@ -1,4 +1,5 @@
 class Car < ApplicationRecord
+ 
   def self.search_brand(search_brand)
     
       # where('brand LIKE :search OR model LIKE :search OR colour LIKE :search OR cast(year as text) LIKE :search OR cast(price as text) LIKE :search', search: "%#{search}%")
