@@ -1,53 +1,50 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Car', new_car_path %>
+
 <h1>Cars</h1>
 
-<%= @honda.brand %>
+<%#= @honda.brand %>
 <br><br>
-<%= @mercedes.model %>
+<%#= @mercedes.model %>
 <br><br>
-<% @bmw.each do |car|%>
-  <%= car.model %>
-  <% end %>
+<%# @bmw.each do |car|%>
+  <%#= car.model %>
+  <%#end %>
 
-
-
-<br><br>
-
+<section class="container-index">
 
 <% @car.each do |car| %>
  
   <div>
-  <div>
+  <div class="desc">
   <%= car.brand %> 
    
    </div>
-   <div>
+   <div class="desc">
    <%= car.model %>
   
    </div>
-   <div>
+   <div class="desc">
    <%= car.year %> 
   
    </div>
-   <div>
-   <%= image_tag car.image %> 
+   <div class="img-index">
+   <%= image_tag car.image, style:"width:100%; height: auto" %> 
   
    </div>
-   <div>
-   <%= car.price %>
+   <div class="desc">
+   $<%= car.price %>
   
    </div>
-   <div> 
+   <div class="desc"> 
    <%= car.colour %> 
    
    </div> 
+  
+   <table class="view">
    <tbody> 
   <tr>
-    <td><%= link_to 'View', car_path(car)%> </td>
-    <td><%= link_to 'Edit', edit_car_path(car) %></td>
-    <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
-  </tr>
+    <td ><%= link_to 'View', car_path(car)%> </td>
+ 
   <br>
     <br>
     
@@ -55,7 +52,7 @@
 </table>
 </div>
 <% end %>
-
+</section>
 
 
 

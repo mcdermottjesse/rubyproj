@@ -19,32 +19,6 @@ class CarsController < ApplicationController
     @car = Car.find params[:id]
   end
 
-  
-  def new
-    @car = Car.new
-  end
-
-  def edit
-  end
-
-
-  def create
-    @car = Car.new(car_params)
-
- 
-  end
-
-  
-  def update
-
-  end
-
-  
-  def destroy
-    @car.destroy
-  
-  end
-
   private
  
     def car_params

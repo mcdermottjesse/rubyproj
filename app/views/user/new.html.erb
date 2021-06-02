@@ -1,6 +1,9 @@
-<h1 class="signup_title">Sign Up</h1>
-<div class="user_signup">
-<%= form_for :user, url: '/user' do |f|%>
+<%= link_to 'Marketplace', cars_path %>
+<%= link_to 'Login', login_path %>
+
+<h1>Sign Up</h1>
+<div>
+<%= form_for :user, url: user_path do |f|%>
   <%= f.label :email%><br>
   <%= f.email_field :email%><br>
   <%= f.label :password%><br>

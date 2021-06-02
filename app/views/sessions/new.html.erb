@@ -1,0 +1,13 @@
+<%= link_to 'Marketplace', cars_path %>
+<%= link_to 'Sign Up', signup_path %>
+
+<h1 >Login</h1>
+<div>
+   <%= form_tag login_path do %>
+   <%= label_tag :email%>
+   <%= text_field_tag :email %>
+   <%= label_tag :password%>
+   <%= password_field_tag :password%>
+   <%= submit_tag "Sign In"%>
+<%end%>
+</div>

@@ -1,30 +1,30 @@
 <nav>
-<%= form_tag(cars_path, method: :get) do %>
+<%= link_to 'Marketplace', cars_path %>
+
+ <% if !current_user %>
+ <a class="navbar-login" href="/login">Login</a>
+ <a class="navbar-user" href="/signup">Signup</a>
+ <% else %>
+ <div class="navbar-logout">You are Logged In as <%= current_user.email %></div>
+ <a href="/logout" class="logout">Logout</a>
+ <% end %>
+ <br><br>
+
+ <%= form_tag(cars_path, method: :get) do %>
   <%= search_field_tag(:search_brand, params[:search_brand], placeholder: "Brand") %>
-  
-  
- 
-  
+
 <br><br>
   <%= form_tag(cars_path, method: :get) do %>
     <%= search_field_tag(:search_model, params[:search_model], placeholder: "Model") %>
-   
-    
-   
    
     <br><br>
     <%= form_tag(cars_path, method: :get) do %>
       <%= search_field_tag(:search_year, params[:search_year], placeholder: "Year") %>
       
-      
-     
-
       <br><br>
       <%= form_tag(cars_path, method: :get) do %>
         <%= search_field_tag(:search_price, params[:search_price], placeholder: "Price", required: true) %>
         
-        
-
         <br><br>
         <%= form_tag(cars_path, method: :get) do %>
           <%= search_field_tag(:search_colour, params[:search_colour], placeholder: "Colour") %>
@@ -35,7 +35,6 @@
           <% end %>
           <% end %>
           <% end %>
-          <% end %>
-          
+          <% end %>   
 </nav>
 
