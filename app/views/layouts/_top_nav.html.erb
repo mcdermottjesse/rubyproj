@@ -1,39 +1,41 @@
 <nav>
 <%= form_tag(cars_path, method: :get) do %>
-  <%= search_field_tag(:search_brand, params[:search_brand]) %>
+  <%= search_field_tag(:search_brand, params[:search_brand], placeholder: "Brand") %>
   
-  <%= submit_tag ("Search by Brand") %>
-  <% end %>
+  
+ 
   
 <br><br>
   <%= form_tag(cars_path, method: :get) do %>
-    <%= search_field_tag(:search_model, params[:search_model]) %>
-    
-    <%= submit_tag ("Search by Model") %>
+    <%= search_field_tag(:search_model, params[:search_model], placeholder: "Model") %>
    
-    <% end %>
+    
+   
+   
     <br><br>
     <%= form_tag(cars_path, method: :get) do %>
-      <%= search_field_tag(:search_year, params[:search_year]) %>
+      <%= search_field_tag(:search_year, params[:search_year], placeholder: "Year") %>
       
-      <%= submit_tag ("Search by Year") %>
+      
      
-      <% end %>
 
       <br><br>
       <%= form_tag(cars_path, method: :get) do %>
-        <%= search_field_tag(:search_price, params[:search_price]) %>
+        <%= search_field_tag(:search_price, params[:search_price], placeholder: "Price", required: true) %>
         
-        <%= submit_tag ("Search by Max Price") %>
-       
-        <% end %>
+        
 
         <br><br>
         <%= form_tag(cars_path, method: :get) do %>
-          <%= search_field_tag(:search_colour, params[:search_colour]) %>
+          <%= search_field_tag(:search_colour, params[:search_colour], placeholder: "Colour") %>
           
-          <%= submit_tag ("Search by Colour") %>
+          <%= submit_tag ("Search") %>
          
           <% end %>
+          <% end %>
+          <% end %>
+          <% end %>
+          <% end %>
+          
 </nav>
 

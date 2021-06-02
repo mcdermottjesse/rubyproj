@@ -2,13 +2,17 @@ class CarsController < ApplicationController
   
   def index
     
-    @car = Car.all.order(created_at: :desc)
-    @car_search = Car.search_brand(params[:search_brand]).search_model(params[:search_model]).search_year(params[:search_year]).search_price(params[:search_price]).search_colour(params[:search_colour])
-      
+    @car = Car.search_brand(params[:search_brand])
+    .search_model(params[:search_model])
+    .search_year(params[:search_year])
+    .search_price(params[:search_price])
+    .search_colour(params[:search_colour])
+    .order(created_at: :desc)
+
     @honda = Car.find(2)
     @mercedes = Car.find_by(:brand => "Mercedes") #or Car.find_by(brand: "BMW")
     @bmw = Car.where("brand LIKE ?", "%B%") #or Car.where(brand: "BMW") to get exact etc
-   
+    
   end
   
   def show
